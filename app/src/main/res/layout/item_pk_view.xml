@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        tools:text="职位要求"
+        android:textColor="@color/color_333333"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="8dp"
+        android:background="@color/color_e4e4e4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tv_name"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </View>
+    <View
+        android:id="@+id/progress_bar_bg"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintLeft_toRightOf="@+id/view_line"
+        android:background="@drawable/light_color_f6f6f6_rtb_20"
+        app:layout_constraintRight_toLeftOf="@+id/tv_num"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:id="@+id/progress_bar"
+        android:layout_width="100dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintLeft_toRightOf="@+id/view_line"
+        android:background="@drawable/light_color_333333_rtb_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="50dp"
+            android:textSize="12dp"
+            android:textColor="@color/color_888888"
+            tools:text="匹配90%"
+            android:gravity="right|center_vertical"
+            android:singleLine="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="136dp">
+
+    <View
+        android:id="@+id/left_line"
+        android:layout_width="0.5dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="31dp"
+        android:background="@color/color_e4e4e4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/max3"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="4dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/color_333333"
+        android:textSize="9sp"
+        app:layout_constraintEnd_toStartOf="@id/left_line"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="150" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/max2"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/color_333333"
+        android:textSize="9sp"
+        app:layout_constraintEnd_toStartOf="@id/left_line"
+        app:layout_constraintTop_toBottomOf="@id/max3"
+        tools:text="100" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/max1"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/color_333333"
+        android:textSize="9sp"
+        app:layout_constraintEnd_toStartOf="@id/left_line"
+        app:layout_constraintTop_toBottomOf="@id/max2"
+        tools:text="50" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/max0"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:gravity="center_vertical"
+        android:text="0"
+        android:textColor="@color/color_333333"
+        android:textSize="9sp"
+        app:layout_constraintEnd_toStartOf="@id/left_line"
+        app:layout_constraintTop_toBottomOf="@id/max1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/left_line"
+        tools:itemCount="6"
+        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_vertical_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

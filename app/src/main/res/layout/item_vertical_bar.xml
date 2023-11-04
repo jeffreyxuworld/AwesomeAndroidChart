@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="52dp"
+    android:layout_height="136dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/year"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/color_333333"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="2023" />
+
+    <View
+        android:id="@+id/line0"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_e4e4e4"
+        app:layout_constraintBottom_toTopOf="@id/year" />
+
+    <com.worldtech.awesomeandroidchart.DashView
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35.5dp"
+        app:dashOrientation="0"
+        app:dashWidth="3dp"
+        app:layout_constraintBottom_toTopOf="@id/line0"
+        app:lineColor="@color/color_e4e4e4"
+        app:lineHeight="0.5dp"
+        app:lineWidth="3dp" />
+
+    <com.worldtech.awesomeandroidchart.DashView
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35.5dp"
+        app:dashOrientation="0"
+        app:dashWidth="3dp"
+        app:layout_constraintBottom_toTopOf="@id/line1"
+        app:lineColor="@color/color_e4e4e4"
+        app:lineHeight="0.5dp"
+        app:lineWidth="3dp" />
+
+    <com.worldtech.awesomeandroidchart.DashView
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35.5dp"
+        app:dashOrientation="0"
+        app:dashWidth="3dp"
+        app:layout_constraintBottom_toTopOf="@id/line2"
+        app:lineColor="@color/color_e4e4e4"
+        app:lineHeight="0.5dp"
+        app:lineWidth="3dp" />
+
+    <View
+        android:id="@+id/progress_bar"
+        android:layout_width="12dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/bg_color_333333_corners_12"
+        app:layout_constraintBottom_toTopOf="@id/line0"
+        app:layout_constraintEnd_toEndOf="@id/year" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/top_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:textColor="@color/color_f57449"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toTopOf="@id/progress_bar"
+        app:layout_constraintEnd_toEndOf="@id/progress_bar"
+        app:layout_constraintStart_toStartOf="@id/progress_bar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
